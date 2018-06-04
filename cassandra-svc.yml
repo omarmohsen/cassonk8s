@@ -1,0 +1,26 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: cassandra
+  name: cassandra1
+spec:
+  clusterIP: None
+  ports:
+    - port: 9042
+  selector:
+    interface: cassandra1
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: cassandra
+  name: cassandra2
+spec:
+  clusterIP: None
+  ports:
+    - port: 9042
+  selector:
+    interface: cassandra2
