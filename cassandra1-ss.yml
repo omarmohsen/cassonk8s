@@ -16,8 +16,15 @@ spec:
         app: cassandra1
         interface: cassandra1
     spec:
-      nodeSelector:
-        kubernetes.io/hostname: minikube
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: dc
+                operator: In
+                values:
+                - DC1
       containers:
       - name: cassandra
         image: cassandra:3
