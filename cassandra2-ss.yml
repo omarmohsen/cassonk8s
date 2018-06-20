@@ -23,7 +23,7 @@ spec:
             - matchExpressions:
               - key: dc
                 operator: In
-                values
+                values:
                 - DC2
       containers:
       - name: cassandra
