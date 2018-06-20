@@ -68,7 +68,7 @@ spec:
           - name: HEAP_NEWSIZE
             value: 100M
           - name: CASSANDRA_SEEDS
-            value: "cassandra1-0.cassandracluster.svc.cluster.local,cassandra2-0.cassandracluster.svc.cluster.local"
+            value: "cassandra1-0.cassandra1.cassandracluster.svc.cluster.local,cassandra2-0.cassandra2.cassandracluster.svc.cluster.local"
           - name: CASSANDRA_CLUSTER_NAME
             value: "CassandraK8s"
           - name: CASSANDRA_DC
