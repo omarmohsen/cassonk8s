@@ -51,7 +51,6 @@ spec:
             port: 9042
           initialDelaySeconds: 15
           periodSeconds: 10
-
         securityContext:
           capabilities:
             add:
