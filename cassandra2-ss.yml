@@ -44,12 +44,12 @@ spec:
             - cqlsh
             - -e
             - 'DESCRIBE KEYSPACES'
-          initialDelaySeconds: 30
+          initialDelaySeconds: 60
           periodSeconds: 10
         readinessProbe:
           tcpSocket:
             port: 9042
-          initialDelaySeconds: 30
+          initialDelaySeconds: 60
           periodSeconds: 10
         securityContext:
           capabilities:
