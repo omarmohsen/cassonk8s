@@ -6,7 +6,7 @@ metadata:
     app: cassandra2
 spec:
   serviceName: cassandra2
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: cassandra2
@@ -92,13 +92,5 @@ spec:
       storageClassName: hostpath
       resources:
         requests:
-          storage: 1Gi
----
-kind: StorageClass
-apiVersion: storage.k8s.io/v1
-metadata:
-  name: fast
-provisioner: kubernetes.io/no-provisioner
-parameters:
-  type: pd-ssd
+          storage: 2Gi
 
